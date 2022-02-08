@@ -13,16 +13,14 @@ import java.util.Scanner;
 public class Study2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Study2Application.class, args);
-        Scanner scanner=new Scanner(System.in);
         AuthController authController=new AuthController();
         AlgoController algoController=new AlgoController();
         QuizController quizController=new QuizController();
         PhoneController phoneController=new PhoneController();
-        authController.excute(scanner);
-        algoController.excute(scanner);
-        quizController.excute(scanner);
-        phoneController.excute(scanner);
+        SpringApplication.run(Study2Application.class, args);
+        Scanner scanner=new Scanner(System.in);
+
+
 
         while (true){
             System.out.println("[MAIN_MENU]\n 0.EXIT\n1.AUTH\n2.ALGORITHM\n3.QUIZ\n4.OOP");
