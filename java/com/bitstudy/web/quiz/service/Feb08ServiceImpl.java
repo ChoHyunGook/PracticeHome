@@ -45,37 +45,32 @@ public class Feb08ServiceImpl implements Feb08Service{
 //
 //        1. 프로그램에는 네 가지 메뉴가 포함된다. (잔액조회,인출,입금,종료)
 //
-//        2. 사용자로부터 패스워드를 입력받아 정보를 보호한다. (패스워드가 틀린 경우 실행이 안 됨)
+//        2. 인출금액은 잔액보다 클 수 없다.
 //
-//        3. 인출금액은 잔액보다 클 수 없다.
+//        3. 사용자가 종료를 원할 때까지 반복 실행한다.
 //
-//        4. 사용자가 종료를 원할 때까지 반복 실행한다.
-//
-//        5. 예금이 인출 된 후에는 인출된 만큼 잔액이 감소해야 한다.
+//        4. 예금이 인출 된 후에는 인출된 만큼 잔액이 감소해야 한다.
 
 
         int total = 200000;//잔액
         int output = 0;//출금
         int input = 0;//입금
-        int pw = 0;//비밀번호
         int m = 10000;
         int m5 = 50000;
         int m10 = 100000;
+        int m20= 200000;
         int m50 = 500000;
         while (true) {
             System.out.println("사용하실 메뉴를 선택해주세요.\n" +
                     "0.잔액조회 1.현금인출 2.입금 3.종료");
             int menu = scanner.nextInt();
             switch (menu) {
-
-
                 case 0:
-                    System.out.println(String.format("고객님의 잔액은 %d입니다.", total));break;
-
-
+                    System.out.println(String.format("고객님의 잔액은 %d입니다.", total));
+                    break;
                 case 1:
                     System.out.println("인출하실 금액을 선택하세요." +
-                            "0. 만원 1. 5만원 2. 10만원 3.50만원 4.직접입력");
+                            "0. 만원 1. 5만원 2. 10만원 3.20만원 4.50만원 5.직접입력");
                     switch (scanner.nextInt()) {
                         case 0:
                             if(total>=m) {
@@ -102,6 +97,14 @@ public class Feb08ServiceImpl implements Feb08Service{
                             }
                             break;
                         case 3:
+                            if(total>=m20){
+                                total=total-m20;
+                                System.out.println(String.format("%d가 출금되었고 잔액은 %d입니다.",m20,total));
+                            }else if(total<m20) {
+                                System.out.println("잔액이 부족합니다. 다시입력해주세요.");
+                            }
+                            break;
+                        case 4:
                             if(total>=m50){
                                 total=total-m50;
                                 System.out.println(String.format("%d가 출금되었고 잔액은 %d입니다.",m50,total));
@@ -109,7 +112,7 @@ public class Feb08ServiceImpl implements Feb08Service{
                                 System.out.println("잔액이 부족합니다. 다시입력해주세요.");
                             }
                             break;
-                        case 4:
+                        case 5:
                             System.out.println("인출금액을 입력해주세요.");
                             output = scanner.nextInt();
                             if (total < output) {
