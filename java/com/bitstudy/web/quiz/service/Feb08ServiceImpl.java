@@ -7,7 +7,11 @@ import java.util.Scanner;
  * fileName        : Feb08ServiceImpl
  * author           : chohyungook
  * date               : 2022-02-08
- * desc             :
+ * desc             :권혜민 : 구구단
+ *  * 김한슬 : 야구
+ *  * 김진영 : 로또
+ *  * 조현국 : 은행(bank)
+ *  * 서성민 : 예약(book)
  * ================================
  * DATE              AUTHOR        NOTE
  * ================================
@@ -15,19 +19,14 @@ import java.util.Scanner;
  */
 public class Feb08ServiceImpl implements Feb08Service{
     @Override
-    public void quiz1() {
-        int i, dan;
-        for (dan = 2; dan <= 9; dan++) {
-            System.out.print("[" + dan + "단]\t");
-        }
-        System.out.println();
-        for (i = 1; i <= 9; i++) {
-            for (dan = 2; dan <= 9; dan++) {
-                System.out.print(dan + "*" + i + "=" + i * dan + "\t");
-            }
-            System.out.println();
+    public void quiz1(Scanner scanner) {
+        System.out.println("단수를 입력하세요.");
+        int dan = scanner.nextInt();
+        for (int i = 1; i < 10; i++) {
+            System.out.print(dan + " * " + i + " = " + (dan*i)+"\t");
         }
     }
+
 
     @Override
     public void quiz2() {

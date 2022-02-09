@@ -117,7 +117,7 @@ public class QuizController {
                                     System.out.println("시스템종료");
                                     return;
                                 case "1":
-                                    service08.quiz1();
+                                    service08.quiz1(scanner);
                                     break;
                                 case "2":
                                     service08.quiz2();
