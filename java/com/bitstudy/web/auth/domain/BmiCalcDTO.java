@@ -16,8 +16,18 @@ package com.bitstudy.web.auth.domain;
  * 2022-01-25         chohyungook        최초 생성
  */
 
-public class BmiCalcDTO extends Object{
+public class BmiCalcDTO{
     public static String MAIN_NAME="BMI 계산기";
+
+
+
+    private final static BmiCalcDTO bmiCalcDTO=new BmiCalcDTO();
+    private  BmiCalcDTO(){}
+    public static BmiCalcDTO getInstance(){return bmiCalcDTO;}
+
+
+
+
     private String name;
     private int weight;
     private double inch;

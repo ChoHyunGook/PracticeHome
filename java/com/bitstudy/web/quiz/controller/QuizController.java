@@ -120,7 +120,7 @@ public class QuizController {
                                     service08.quiz1(scanner);
                                     break;
                                 case "2":
-                                    service08.quiz2();
+                                    service08.quiz2(scanner);
                                     break;
                                 case "3":
                                     service08.quiz3();
@@ -132,14 +132,13 @@ public class QuizController {
                                     service08.quiz5(scanner);
                                     break;
                                 default:
-                                    System.out.println("정확한 메뉴를 선택하세요.");;
+                                    System.out.println("정확한 메뉴를 선택하세요.");
                                     break;
-
                             }
-
                         }
+                    case "4":
 
-                    case "4":break;
+                        break;
 
                     default:
                     System.out.println("올바른 메뉴를 선택하세요.");break;

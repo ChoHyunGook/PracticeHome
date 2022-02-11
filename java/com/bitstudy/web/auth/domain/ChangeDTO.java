@@ -13,6 +13,11 @@ package com.bitstudy.web.auth.domain;
  */
 public class ChangeDTO {
     public static String MAIN_NAME="300원 커피 자판기 거스름돈";
+
+    private final static ChangeDTO changeDTO=new ChangeDTO();
+    private  ChangeDTO(){}
+    public static ChangeDTO getInstance(){return changeDTO;}
+
     public static int coffee =300;
     private int input=0;
 

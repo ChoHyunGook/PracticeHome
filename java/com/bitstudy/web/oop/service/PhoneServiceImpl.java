@@ -1,39 +1,42 @@
 package com.bitstudy.web.oop.service;
 
-import java.util.Scanner;
+import com.bitstudy.web.oop.domain.CelPhone;
+import com.bitstudy.web.oop.domain.GalPhone;
+import com.bitstudy.web.oop.domain.IPhone;
+import com.bitstudy.web.oop.domain.Phone;
 
 /**
- * packageName: com.bitstudy.web.service
+ * packageName: com.bitstudy.web.oop.service
  * fileName        : PhoneServiceImpl
  * author           : chohyungook
- * date               : 2022-02-08
+ * date               : 2022-02-09
  * desc             :
  * ================================
  * DATE              AUTHOR        NOTE
  * ================================
- * 2022-02-08         chohyungook        최초 생성
+ * 2022-02-09         chohyungook        최초 생성
  */
 public class PhoneServiceImpl implements PhoneService{
     @Override
-    public void usePhone(Scanner scanner) {
-        System.out.println("집전화");
+    public void usePhone(Phone phone) {
+        System.out.println(phone.toString());
     }
 
     @Override
-    public void useCelPhone(Scanner scanner) {
-        System.out.println("핸드폰");
-
-    }
-
-    @Override
-    public void useIPhone(Scanner scanner) {
-        System.out.println("아이폰");
+    public void useCelPhone(CelPhone celPhone) {
+        System.out.println(celPhone.toString());
 
     }
 
     @Override
-    public void useGalPhone(Scanner scanner) {
-        System.out.println("겔럭시노트");
+    public void useIPhone(IPhone iPhone) {
+        System.out.println(iPhone.toString());
+
+    }
+
+    @Override
+    public void useGalPhone(GalPhone galPhone) {
+        System.out.println(galPhone.toString());
 
     }
 }

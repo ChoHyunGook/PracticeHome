@@ -7,7 +7,11 @@ import java.util.Scanner;
  * fileName        : Feb08Service
  * author           : chohyungook
  * date               : 2022-02-08
- * desc             :
+ * desc             :권혜민 : 구구단
+ * 김한슬 : 야구
+ * 김진영 : 로또
+ * 조현국 : 은행(bank)
+ * 서성민 : 예약(book)
  * ================================
  * DATE              AUTHOR        NOTE
  * ================================
@@ -15,7 +19,7 @@ import java.util.Scanner;
  */
 public interface Feb08Service {
     void quiz1(Scanner scanner);
-    void quiz2();
+    void quiz2(Scanner scanner);
     void quiz3();
     void quiz4(Scanner scanner);
     void quiz5(Scanner scanner);

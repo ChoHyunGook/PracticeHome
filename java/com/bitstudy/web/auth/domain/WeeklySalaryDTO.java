@@ -13,6 +13,12 @@ package com.bitstudy.web.auth.domain;
  */
 public class WeeklySalaryDTO {
     public static String MAIN_NAME="WEEKLY SALARY CALC";
+
+    private final static WeeklySalaryDTO weeklySalaryDTO=new WeeklySalaryDTO();
+    private  WeeklySalaryDTO(){}
+    public static WeeklySalaryDTO getInstance(){return weeklySalaryDTO;}
+
+
     private String name;
     private int work_hour;
     private int work_day;

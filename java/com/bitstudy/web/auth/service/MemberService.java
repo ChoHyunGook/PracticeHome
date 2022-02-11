@@ -19,7 +19,7 @@ public interface MemberService {
     String getCircleArea(CircleAreaDTO circleArea);
     String getCalc(CalcDTO calc);
     String getGrade(GradeDTO grade);
-    String getLogin(LoginDTO login);
+    String getLogin(UserDTO login);
     String getSearch(SearchDTO search);
     String getWeekSalary(WeeklySalaryDTO weeklySalary);
 

@@ -14,6 +14,7 @@ import com.bitstudy.web.auth.domain.*;
  * 2022-02-07         chohyungook        최초 생성
  */
 public class MemberServiceImpl implements MemberService {
+
     @Override
     public String getBmi(BmiCalcDTO bmi) {
         double res = bmi.getWeight() / (bmi.getInch() * bmi.getInch()*10000);
@@ -93,7 +94,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public String getLogin(LoginDTO login) {
+    public String getLogin(UserDTO login) {
         String res = "";
 
 

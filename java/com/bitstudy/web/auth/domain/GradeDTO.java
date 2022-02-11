@@ -14,6 +14,8 @@ package com.bitstudy.web.auth.domain;
  */
 public class GradeDTO {
     public static String GRADE_TITLE ="성적표";
+
+
     private String name;
     private int kor;
     private int eng;

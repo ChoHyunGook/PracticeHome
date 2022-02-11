@@ -1,7 +1,7 @@
 package com.bitstudy.web;
 
 import com.bitstudy.web.algorithm.controller.AlgoController;
-import com.bitstudy.web.oop.controller.PhoneController;
+import com.bitstudy.web.oop.controller.OopController;
 import com.bitstudy.web.auth.controller.AuthController;
 import com.bitstudy.web.quiz.controller.QuizController;
 import org.springframework.boot.SpringApplication;
@@ -16,7 +16,7 @@ public class Study2Application {
         AuthController authController=new AuthController();
         AlgoController algoController=new AlgoController();
         QuizController quizController=new QuizController();
-        PhoneController phoneController=new PhoneController();
+        OopController phoneController=new OopController();
         SpringApplication.run(Study2Application.class, args);
         Scanner scanner=new Scanner(System.in);
 
