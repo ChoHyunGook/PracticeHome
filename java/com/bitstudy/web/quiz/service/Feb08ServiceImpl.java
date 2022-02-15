@@ -1,5 +1,6 @@
 package com.bitstudy.web.quiz.service;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -19,7 +20,7 @@ import java.util.Scanner;
  */
 public class Feb08ServiceImpl implements Feb08Service{
     @Override
-    public void quiz1(Scanner scanner) {
+    public void gugudan(Scanner scanner) {
         System.out.println("단수를 입력하세요.");
         int dan = scanner.nextInt();
         for (int i = 1; i < 10; i++) {
@@ -29,7 +30,7 @@ public class Feb08ServiceImpl implements Feb08Service{
     }
 
     @Override
-    public void quiz2(Scanner scanner) {
+    public void baseball(Scanner scanner) {
         int com1 = (int)(Math.random()*9)+1;
         int com2 = (int)(Math.random()*9)+1;
         while(com1==com2) {
@@ -93,12 +94,29 @@ public class Feb08ServiceImpl implements Feb08Service{
     }
 
     @Override
-    public void quiz3() {
+    public String lotto() {
+        Random rand = new Random();
+        String res = "";
+        int[] lotto = new int[6];
+        for (int i = 0; i < 6; i++) {
+            lotto[i] = rand.nextInt(45) + 1;
+            for (int j = 0; j < i; j++) {
+                if (lotto[i] == lotto[j])
+                    i--;
+                break;
+            }
+        }
+        for (int i = 0; i < 6; i++) {
+            res += String.format(lotto[i] + " ");
+        }
+        return res;
+
+
 
     }
 
     @Override
-    public void quiz4(Scanner scanner) {
+    public void bank(Scanner scanner) {
 //        <조건>
 //
 //        1. 프로그램에는 네 가지 메뉴가 포함된다. (잔액조회,인출,입금,종료)
@@ -307,7 +325,7 @@ public class Feb08ServiceImpl implements Feb08Service{
     }
 
     @Override
-    public void quiz5(Scanner scanner) {
+    public void book(Scanner scanner) {
         // 1. 배열을 이용하여 간단한 극장 예약시스템 작성
         // 2. 아주 작은 극장이라 좌석이 10개만  됨.
         // 3. 먼저 좌석 배치표를 보여주고 예약이 끝나면 1로

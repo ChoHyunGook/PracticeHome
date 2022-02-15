@@ -117,19 +117,19 @@ public class QuizController {
                                     System.out.println("시스템종료");
                                     return;
                                 case "1":
-                                    service08.quiz1(scanner);
+                                    service08.gugudan(scanner);
                                     break;
                                 case "2":
-                                    service08.quiz2(scanner);
+                                    service08.baseball(scanner);
                                     break;
                                 case "3":
-                                    service08.quiz3();
+                                    service08.lotto();
                                     break;
                                 case "4":
-                                    service08.quiz4(scanner);
+                                    service08.bank(scanner);
                                     break;
                                 case "5":
-                                    service08.quiz5(scanner);
+                                    service08.book(scanner);
                                     break;
                                 default:
                                     System.out.println("정확한 메뉴를 선택하세요.");
